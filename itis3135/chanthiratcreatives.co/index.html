@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chanthirat Firm</title>
+  <title>Chanthirat Creatives</title>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <!-- Color palette from Coolors: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd -->
   <style>
     body {
-      background-color: #e0e1dd; /* light grayish background */
-      color: #0d1b2a; /* dark text */
+      background-color: #e0e1dd; 
+      color: #0d1b2a; 
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -24,7 +24,7 @@
     }
   
     header img {
-      height: 60px;
+      height: 80px;
       width: auto;
       margin-right: 1em;
     }
@@ -39,21 +39,34 @@
   
     h2 {
       color: #415a77;
+      font-size: 1.8em;
+      margin-bottom: 1em;
     }
   
     ul {
       list-style-type: square;
       padding-left: 1.5em;
+      margin-bottom: 2em;
       color: #0d1b2a;
     }
   
     a {
       color: #415a77;
-      text-decoration: none;
+      text-decoration: underline;
     }
   
     a:hover {
       color: #778da9;
+    }
+
+    .custom-bullets {
+      list-style: none;
+      padding-left: 1em;
+    }
+
+    .custom-bullets li::before {
+      content: "‣ ";
+      margin-right: 0.5em;
     }
   
     .contact {
@@ -73,36 +86,41 @@
 </head>
 <body>
     <header>
-        <img src="../images/chanthiratfirmlogo.png" alt="Chanthirat Firm Logo" height="80" width="80">
-        <h1>Chanthirat Firm Services</h1>
+        <img src="../images/firmlogo.png" alt="Chanthirat Creatives Design Logo" height="80" width="80">
+        <h1>Chanthirat Creatives</h1>
       </header>
     
       <main>
-        <h2>Where do you want your designs to take you?</h2>
-        <p>Chanthirat Firm is a forward-thinking web design and development firm focused on clean code, intuitive UX, and creative branding solutions. We bring ideas to life online.</p>
+        <h2>Chanthirat Creatives Services</h2>
+        <p>Our goal is to provide clean code, intuitive UX, and creative digital solutions. We bring ideas to life online.</p>
     
-        <ul>
+        <ul class="custom-bullets">
           <li>Responsive website design</li>
           <li>Custom branding packages</li>
           <li>UX/UI optimization</li>
-          <li>SEO-friendly development</li>
-          <li>Fast turnaround times</li>
+          <li>SEO-conscious development</li>
+          <li>Fast turnaround without sacrificing quality</li>
           <li>100% satisfaction guarantee</li>
           <li>Consulting & training available</li>
         </ul>
     
-        <p>We would love to bring your vision to life. Whether you're a small business or an individual with a big idea, let's work together to build something great.</p>
+        <p>Whether you're launching your first site or refreshing an established brand, Chanthirat Creatives would love to help bring your digital vision to life.
+        </p>
     
         <div class="contact">
-          <p>Email: contact@chanthiratfirm.co</p>
-          <p>Phone: (333) 123-4567</p>
-          <p>Address: 123 Design Road, Imagination City, NC 28203</p>
+          <p><strong>Contact Us</strong></p>
+          <p>Email: contact@chanthiratcreatives.co</p>
+          <p>Phone: (704) 123-4567</p>
+          <p>Address: 123 Design Road, Innovative City, NC 28223</p>
         </div>
       </main>
     
       <footer>
-        <p>© 2025 Chanthirat Firm — "Designs that drive life"</p>
+        <p>© 2025 Chanthirat Creatives — "Empowering ideas through design"</p>
+        <div class="validation-links">
+          <a href="https://validator.w3.org/" target="_blank">HTML Validation</a>  
+          <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a>
+        </div>
       </footer>
-    
 </body>
 </html>
