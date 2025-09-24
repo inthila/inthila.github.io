@@ -3,41 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITIS3135 | Inthila Chanthirat's | Interesting Capybara | Course Home Page</title>
+  <title>Inthila Chanthirat's Interesting Capybara | ITIS3135 | Home</title>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/default.css" />
+  <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
   <header>
-    <h1>ITIS3135 | Inthila Chanthirat's | Interesting Capybara</h1>
-    <nav class="primary">
-      <a href="index.html">Course Home Page</a>
-      <a href="introduction.html">Introduction</a>
-      <a href="contract.html">Contract</a>
-    </nav>
-    <nav class="secondary">
-      <a href="mascotcompany/index.html" target="_blank">Interesting Capybara</a>
-    </nav>
+    <div data-include="components/header.html"></div>
   </header>
   <main>
-    <h2>Course Home Page</h2>
+    <h2>Home</h2>
     <p class="center">This is my ITIS 3135 Course Home Page! There's not much here yet.</p>
   </main>
   <footer>
-    <nav>
-      <a href="https://webpages.charlotte.edu/ichanthi" target="_blank">UNCC Webspace</a> |
-      <a href="https://github.com/inthila" target="_blank">GitHub</a> |
-      <a href="https://inthila.github.io">GitHub.io</a> |
-      <a href="https://inthila.github.io/itis3135/">Course.io</a> |
-      <a href="https://www.freecodecamp.org/inthila-chanthirat" target="_blank">FreeCodeCamp</a> |
-      <a href="https://www.codecademy.com/profiles/ichanthi" target="_blank">Codecademy</a> |
-      <a href="http://www.linkedin.com/in/inthila-chanthirat" target="_blank">LinkedIn</a>
-    </nav>
-    <p>Designed by <a href="chanthiratcreatives.co/index.html" target="_blank">Chanthirat Creatives</a> &copy; 2025</p>
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a> |
-      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a>
-    </p>    
+    <div data-include="components/footer.html"></div>
   </footer>
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + window.location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + window.location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
