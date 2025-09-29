@@ -101,6 +101,17 @@ footer {
       margin: 6px 4px;
     }
 }
+
+a {
+    color: #004488;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+  }
+  
   
   
   
