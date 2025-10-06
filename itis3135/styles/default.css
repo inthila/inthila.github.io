@@ -1,146 +1,148 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; 
-    color: #222222;            
-    margin: 0;
-    padding: 0 1em;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; 
+  color: #222222;            
+  margin: 0;
+  padding: 0 1em;
+  line-height: 1.6;
 }
 
 header {
-    text-align: center;
-    padding: 1em 0;
+  text-align: center;
+  padding: 1em 0;
 }
 
 .centered-image {
-    display: block;
-    margin: 0 auto;          
-    max-width: 90%;          
-    height: auto;            
+  display: block;
+  margin: 0 auto;          
+  max-width: 90%;          
+  height: auto;            
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
-  
+
 main {
-    max-width: 900px;
-    margin: 2em auto;
+  max-width: 900px;  
+  width: 90%;       
+  margin: 0 auto;         
 }
-  
+
 h1 {
-    font-family: Georgia, serif;
-    color: #0a2342;
-    margin-top: 0;
-    font-size: 2.8em;
-    margin-bottom: 0.5em;
-    text-align: center;
+  font-family: Georgia, serif;
+  color: #0a2342;
+  margin-top: 0;
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
-  
+
 h2 {
-    font-family: Georgia, serif;
-    color: #0a2342;
-    margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 1em;
-    text-align: center;
+  font-family: Georgia, serif;
+  color: #0a2342;
+  margin-top: 0;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
 }
-  
-  
+
 p {
-    font-size: 1.1em;
-    color: #333333; 
-    margin-bottom: 1em;
+  font-size: 1.1em;
+  color: #333333; 
+  margin-bottom: 1em;
 }
-  
+
 nav a { 
-    color: #0a2342; 
-    text-decoration: none; 
-    margin: 0 8px; font-weight: 600; 
-    transition: color 0.3s ease; 
+  color: #0a2342; 
+  text-decoration: none; 
+  margin: 0 8px; 
+  font-weight: 600; 
+  transition: color 0.3s ease; 
 } 
 
 .primary, .secondary { 
-    text-align: center; 
-    margin: 0.5em 0; 
+  text-align: center; 
+  margin: 0.5em 0; 
 } 
 
 nav a:hover, nav a:focus { 
-    color: #14476d; 
-    text-decoration: underline; 
-}
-
-nav a:hover,
-nav a:focus {
+  color: #14476d; 
+  text-decoration: underline; 
   background-color: #dcdcdc;
-  color: #0a2342;
   text-decoration: none;
 }
 
 footer {
-    font-size: 0.9em;
-    color: #555555;
-    text-align: center;
-    padding: 1em 0;
-    border-top: 1px solid #ddd;
-    margin-top: 3em;
-}
-  
-@media (max-width: 600px) {
-    body {
-      padding: 0 0.5em;
-    }
-  
-    main {
-      margin: 1em auto;
-      max-width: 100%;
-    }
-  
-    nav a {
-      display: inline-block;
-      margin: 6px 4px;
-    }
+  font-size: 0.9em;
+  color: #555555;
+  text-align: center;
+  padding: 1em 0;
+  border-top: 1px solid #ddd;
+  margin-top: 3em;
 }
 
 a {
-    color: #004488;
-    text-decoration: none;
+  color: #004488;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tfoot {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+  main {
+      width: 95%;
+      max-width: 700px;
+      margin: 0 auto;
   }
-  
-  a:hover {
-    color: #ff6600;
-    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      padding: 0 0.5em;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-family: sans-serif;
-    font-size: 1rem;
+
+  main {
+      width: 98%;
+      max-width: 100%;
+      margin: 0 auto;
   }
-  
-  caption {
-    caption-side: top;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+
+  nav a {
+      display: inline-block;
+      margin: 6px 4px;
   }
-  
-  thead {
-    background-color: #f2f2f2;
-  }
-  
-  tfoot {
-    background-color: #f9f9f9;
-    font-weight: bold;
-  }
-  
-  th, td {
-    padding: 12px;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  
-  
-  
+}
