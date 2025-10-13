@@ -30,7 +30,7 @@ main {
 }
 
 h1 {
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   color: #0a2342;
   margin-top: 0;
   font-size: 2.8em;
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   color: #0a2342;
   margin-top: 0;
   font-size: 2em;
@@ -68,9 +68,7 @@ nav a {
 
 nav a:hover, nav a:focus { 
   color: #14476d; 
-  text-decoration: underline; 
-  background-color: #dcdcdc;
-  text-decoration: none;
+  /*background-color: #dcdcdc;*/
 }
 
 footer {
@@ -85,11 +83,6 @@ footer {
 a {
   color: #004488;
   text-decoration: none;
-}
-
-a:hover {
-  color: #ff6600;
-  text-decoration: underline;
 }
 
 table {
