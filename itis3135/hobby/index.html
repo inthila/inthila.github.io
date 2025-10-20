@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CD Collecting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1f2421;
+      color: #dce1de;
+      margin: 0;
+    }
+  
+    header, footer {
+      background-color: #216869;
+      color: #dce1de;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #dce1de;
+      font-weight: bold;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+      color: #9cc5a1;
+    }
+  
+    .divider {
+      margin: 0 5px;
+      font-size: 18px;
+      color: #9cc5a1;
+    }
+  
+    main section {
+      display: none;
+      padding: 20px;
+      padding-bottom: 100px;
+    }
+  
+    main section.active {
+      display: block;
+    }
+  
+    h1, h2 {
+      color: #9cc5a1;
+    }
+  
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+  
+    figcaption {
+      font-weight: bold;
+      color: #9cc5a1;
+    }
+  
+    .prompt {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #9cc5a1;
+    }
+  
+    table, th, td {
+      border: 1px solid #9cc5a1;
+      border-collapse: collapse;
+      padding: 10px;
+      color: #dce1de;
+      background-color: #216869;
+    }
+  
+    form label {
+      display: block;
+      margin-top: 10px;
+      color: #dce1de;
+    }
+  
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      background-color: #dce1de;
+      color: #1f2421;
+      border: 1px solid #49a078;
+    }
+  
+    form button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #49a078;
+      color: #1f2421;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    form button:hover {
+      background-color: #9cc5a1;
+      color: #1f2421;
+    }
+  
+    footer {
+    background-color: #216869;
+    color: #dce1de;
+    padding: 1rem;
+    text-align: center;
+    }
+  
+    footer a {
+      color: #dce1de;
+      text-decoration: none;
+    }
+  
+    footer a:hover {
+      text-decoration: underline;
+      color: #9cc5a1;
+    }
+  </style>  
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+    window.onload = () => showSection("what");
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>💿 CD Collecting</h1>
+    <nav>
+      <a href="#" onclick="showSection('what')">What</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('who')">Who</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('when')">When</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('where')">Where</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('how')">How</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('why')">Why</a><span class="divider">💿</span>
+      <a href="#" onclick="showSection('ai')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="what">
+      <h2>What is CD Collecting?</h2>
+      <p>CD collecting is the hobby of finding and preserving compact discs. It’s a way to enjoy music in its physical format and build a personal archive of your favorite albums.</p>
+      <p>From rare editions to everyday releases, CD collectors love the tangible connection to music.</p>
+      <figure>
+        <img src="images/cd-stack.jpg" alt="Stack of music CDs" width="400">
+        <figcaption>Stacked and Sorted</figcaption>
+        <p class="prompt">*AI Prompt: "Stack of music CDs in jewel cases, top-down view, photorealistic"* (DALL·E 3)</p>
+      </figure>
+    </section>
+
+    <section id="who">
+      <h2>Who Collects CDs?</h2>
+      <p>I enjoy CD collecting because it is the only music format that lets me listen to track albums as they were intended to sound like when recorded in studio.</p>
+      <p>I started collecting CDs in 2019 to rediscover albums I love and explore hidden gems from different eras.</p>
+      <figure>
+        <img src="images/collector.jpeg" alt="Person holding favorite CD" width="400">
+        <figcaption>Proud Collectors</figcaption>
+        <p class="prompt">*AI Prompt: "Person holding rare music CD, smiling, cozy indoor setting"* (Perchance AI Image Generator)</p>
+      </figure>
+    </section>
+
+    <section id="when">
+      <h2>When to Collect CDs?</h2>
+      <p>The best time to collect CDs is during:
+        <ul>
+          <li>New album release days</li>
+          <li>Garage sales and thrift store restocks</li>
+          <li>Record stores and online auctions</li>
+        </ul>
+      </p>
+      <table>
+        <tr><th>Day</th><th>Best Opportunity</th></tr>
+        <tr><td>Friday</td><td>New music releases</td></tr>
+        <tr><td>Saturday</td><td>Garage sales & flea markets</td></tr>
+        <tr><td>Wednesday</td><td>Mid-week thrift store restock</td></tr>
+      </table>
+      <figure>
+        <img src="images/release-day.jpeg" alt="New CD releases" width="400">
+        <figcaption>Fresh Finds</figcaption>
+        <p class="prompt">*AI Prompt: "Shelf of new music CD releases in record store, photorealistic"* (Perchance AI Image Generator)</p>
+      </figure>
+    </section>
+
+    <section id="where">
+      <h2>Where to Find CDs?</h2>
+      <p>Here are great places to hunt for CDs:</p>
+      <ul>
+        <li>Thrift stores (Goodwill, Salvation Army)</li>
+        <li>Online (eBay, Discogs, Marketplace)</li>
+        <li>Record stores and conventions</li>
+      </ul>
+      <figure>
+        <img src="images/thrift-bin.jpeg" alt="Used CD bin in thrift store" width="400">
+        <figcaption>Digging Through Bins</figcaption>
+        <p class="prompt">*AI Prompt: "Used CD bin in a thrift store, colorful, top view, photorealistic"* (Perchance AI Image Generator)</p>
+      </figure>
+    </section>
+
+    <section id="how">
+      <h2>How to Start Collecting?</h2>
+      <p>You don’t need a lot to get started. Just an ear for music and a love for physical media. You could start by visiting estate sales and choosing albums based on their cover art.</p>
+      <p>Many thrift stores sell CD players and most cars have a built-in CD player system. You could ask to borrow CDs from friends or family to get started.</p>
+      <form>
+        <label>Your favorite CD:
+          <input type="text" name="favoriteCD" placeholder="e.g. Daft Punk – Discovery">
+        </label>
+        <label>Where do you shop for CDs?
+          <input type="text" name="source" placeholder="e.g. Discogs, local store">
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+      <figure>
+        <img src="images/cd-shelf.jpeg" alt="Organized CD shelf" width="400">
+        <figcaption>Shelf Goals</figcaption>
+        <p class="prompt">*AI Prompt: "Organized CD collection on wooden shelf, colorful album spines, cozy room"* (Perchance AI Image Generator)</p>
+      </figure>
+    </section>
+
+    <section id="why">
+      <h2>Why CD Collecting?</h2>
+      <p>CDs offer lossless sound quality and a tactile experience current streaming platforms can’t match. Most archived music can be hard to find on Spotify and it gives a sense of ownership to have a CD.</p>
+      <p>They also bring nostalgia, and many albums are still affordable and easy to find. I find hidden gems quite often at my local record store. The owner even orders CDs online and brings it in-store if it isn't in his inventory.</p>
+      <figure>
+        <img src="images/nostalgia.jpeg" alt="Old CD player and CDs" width="400">
+        <figcaption>Music Memories</figcaption>
+        <p class="prompt">*AI Prompt: "Vintage CD player with CDs spread around, 90s aesthetic, warm lighting"* (Perchance AI Image Generator)</p>
+      </figure>
+    </section>
+
+    <section id="ai">
+      <h2>AI Prompts Used</h2>
+      <p>I used DALL·E 3 and Perchance AI Image Generator to generate the images on this page. Below are the prompts:</p>
+      <ul>
+        <li>"Stack of music CDs in jewel cases, top-down view, photorealistic"</li>
+        <li>"Person holding rare music CD, smiling, cozy indoor setting"</li>
+            <li>"Shelf of new music CD releases in record store, photorealistic"</li>
+            <li>"Used CD bin in a thrift store, colorful, top view, photorealistic"</li>
+            <li>"Organized CD collection on wooden shelf, colorful album spines, cozy room"</li>
+            <li>"Vintage CD player with CDs spread around, 90s aesthetic, warm lighting"</li>
+          </ul>
+          <p>All AI images were created using DALL·E 3 or Perchance AI Image Generator.</p>
+        </section>
+      </main>
+    
+      <footer>
+        <p>
+          <a href="https://validator.w3.org/check?uri=referer" target="_blank">✔ HTML</a> |
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">✔ CSS</a> |
+          <a href="https://wave.webaim.org/report" target="_blank">✔ Accessibility</a>
+        </p>
+        <p>Designed by <a href="chanthiratcreatives.co/index.html" target="_blank">Chanthirat Creatives</a> &copy; 2025</p>
+    </footer>
+    </body>
+    </html>
+    
