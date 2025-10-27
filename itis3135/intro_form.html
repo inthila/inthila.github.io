@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inthila Chanthirat's Interesting Capybara | ITIS3135 | Introduction Form</title>
+  <script src="scripts/introduction.js" defer></script>
+  <link rel="stylesheet" href="styles/default.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  
+  <main>
+    <h2>Introduction Form</h2>
+
+    <div id="form-container">
+        <h3>Please submit the form below.</h3>
+
+        <form id="introForm">
+            <fieldset>
+                <legend>Name (Used for Title)</legend>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" value="Inthila" placeholder="e.g., Inthila" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" value="Chanthirat" placeholder="e.g., Chanthirat" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Image and Caption</legend>
+                <div class="form-group">
+                    <label for="picture">Picture (Optional: leave blank to use default):</label>
+                    <input type="file" id="picture" name="picture" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="caption">Picture Caption:</label>
+                    <input type="text" id="caption" name="caption" value="Photo taken in Vientiane, Laos" placeholder="A caption for your image" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Content Sections</legend>
+                <div class="form-group">
+                    <label for="aboutMe">About Me:</label>
+                    <textarea id="aboutMe" name="aboutMe" rows="4" placeholder="Write your 'About Me' section..." required>I am a cybersecurity student and I work at a food hall in my hometown. I’m from the Charlotte area. I love playing games like Truck Simulator and my goal in life is to become forklift certified.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="personalBg">Personal Background:</label>
+                    <textarea id="personalBg" name="personalBg" rows="3" placeholder="Write your 'Personal Background'..." required>I am currently working towards my bachelors and I have a deep love for learning and helping others. My heritage is Laos and I grew up in the Charlotte area my whole life.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="professionalBg">Professional Background:</label>
+                    <textarea id="professionalBg" name="professionalBg" rows="3" placeholder="Write your 'Professional Background'..." required>I was an associate at Denso manufacturing for a couple of months before I went back to food service. I currently run the food stall me and my friends helped to launch in 2024.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="academicBg">Academic Background:</label>
+                    <textarea id="academicBg" name="academicBg" rows="3" placeholder="Write your 'Academic Background'..." required>I went to high school at the Early College in Concord, NC. I am now a cybersecurity major in my second year at UNCC.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="primaryComputer">Primary Computer:</label>
+                    <textarea id="primaryComputer" name="primaryComputer" rows="2" placeholder="Tell us about your computer..." required>I use my Windows PC at home and Macbook Pro when traveling.</textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses</legend>
+                <p>Note: The section title will be "Courses I’m Taking, & Why"</p>
+                <div id="courses-container">
+                    <div class="course-entry">
+                        <input type="text" name="courseDept" value="ITSC" placeholder="Dept" required>
+                        <input type="text" name="courseNum" value="3146" placeholder="Num" required>
+                        <input type="text" name="courseName" value="Operating Systems & Networking" placeholder="Name" required>
+                        <input type="text" name="courseReason" value="Required for my major and necessary for learning cybersecurity." placeholder="Reason" required>
+                        <button type="button" class="delete-course">Remove</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept" value="ITIS" placeholder="Dept" required>
+                        <input type="text" name="courseNum" value="3135" placeholder="Num" required>
+                        <input type="text" name="courseName" value="Front-End Web App Development" placeholder="Name" required>
+                        <input type="text" name="courseReason" value="Required. I am excited for this class." placeholder="Reason" required>
+                        <button type="button" class="delete-course">Remove</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept" value="MATH" placeholder="Dept" required>
+                        <input type="text" name="courseNum" value="1242" placeholder="Num" required>
+                        <input type="text" name="courseName" value="Calculus II" placeholder="Name" required>
+                        <input type="text" name="courseReason" value="Required and I am concerned about taking this class." placeholder="Reason" required>
+                        <button type="button" class="delete-course">Remove</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept" value="ITIS" placeholder="Dept" required>
+                        <input type="text" name="courseNum" value="3200" placeholder="Num" required>
+                        <input type="text" name="courseName" value="Intro to Info Security & Privacy" placeholder="Name" required>
+                        <input type="text" name="courseReason" value="Required for learning cybersecurity." placeholder="Reason" required>
+                        <button type="button" class="delete-course">Remove</button>
+                    </div>
+                </div>
+                <button type="button" id="add-course">Add Course</button>
+            </fieldset>
+            
+            <div class="form-controls">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="output-container" style="display: none;">
+        </div>
+
+  </main>
+  
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>
