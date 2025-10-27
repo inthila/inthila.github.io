@@ -1,12 +1,18 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get references to all the necessary elements
-    const introForm = document.getElementById('intro-form');
-    const resultsContainer = document.getElementById('results-container');
+    // --- 1. Get references to all the necessary elements ---
+    // CHANGED: Matched all IDs to your new HTML (e.g., 'introForm', 'output-container')
+    const introForm = document.getElementById('introForm'); 
+    const outputContainer = document.getElementById('output-container'); 
     const clearBtn = document.getElementById('clear-btn');
     const addCourseBtn = document.getElementById('add-course');
     const coursesContainer = document.getElementById('courses-container');
+  
+    // Exit if the form isn't on this page
+    if (!introForm) {
+      return;
+    }
   
     /**
      * Main form submission handler
@@ -15,49 +21,56 @@ document.addEventListener('DOMContentLoaded', () => {
       // Prevent the default form submission (which reloads the page)
       e.preventDefault();
   
-      // --- 1. Validation ---
-      // Check if the form is valid (all 'required' fields are filled)
-      // The instruction "prevents the form from submitting w/o the required information"
-      // is handled by this check combined with the 'required' attribute in your HTML inputs.
+      // --- 2. Validation ---
       if (!introForm.checkValidity()) {
-        // If not, trigger the browser's built-in validation messages
         introForm.reportValidity();
         return;
       }
   
-      // --- 2. Gather Data ---
-      // Get simple values
-      const imgUrl = document.getElementById('img_url').value;
-      const imgCaption = document.getElementById('img_caption').value;
-      const aboutMe = document.getElementById('about_me').value;
-      const personalBg = document.getElementById('personal_bg').value;
-      const profBg = document.getElementById('prof_bg').value;
-      const acadBg = document.getElementById('acad_bg').value;
-      const computer = document.getElementById('computer').value;
+      // --- 3. Gather Data ---
+      
+      // --- Handle File Input ---
+      // CHANGED: This is a major update to handle the <input type="file">
+      const pictureInput = document.getElementById('picture');
+      let imageUrl;
   
-      // Get dynamic courses
+      if (pictureInput.files.length > 0) {
+        // If a new file is uploaded, create a temporary URL for it
+        imageUrl = URL.createObjectURL(pictureInput.files[0]);
+      } else {
+        // Otherwise, use the default image from your original introduction page
+        imageUrl = "images/inthilainlaos.jpeg"; 
+      }
+  
+      // CHANGED: Matched all element IDs to your HTML (e.g., 'caption', 'aboutMe')
+      const imgCaption = document.getElementById('caption').value;
+      const aboutMe = document.getElementById('aboutMe').value;
+      const personalBg = document.getElementById('personalBg').value;
+      const profBg = document.getElementById('professionalBg').value;
+      const acadBg = document.getElementById('academicBg').value;
+      const computer = document.getElementById('primaryComputer').value;
+  
+      // --- Get dynamic courses ---
       let courseListHTML = '';
       const courseEntries = coursesContainer.querySelectorAll('.course-entry');
       
       courseEntries.forEach(entry => {
-        // Find the inputs within this specific 'entry' div
-        const dept = entry.querySelector('input[name="course_dept"]').value;
-        const num = entry.querySelector('input[name="course_num"]').value;
-        const name = entry.querySelector('input[name="course_name"]').value;
-        const reason = entry.querySelector('input[name="course_reason"]').value;
+        // CHANGED: Matched all input 'name' attributes (e.g., 'courseDept')
+        const dept = entry.querySelector('input[name="courseDept"]').value;
+        const num = entry.querySelector('input[name="courseNum"]').value;
+        const name = entry.querySelector('input[name="courseName"]').value;
+        const reason = entry.querySelector('input[name="courseReason"]').value;
         
-        // Build the HTML list item for this course
-        // Only add the list item if all fields for that course are filled
         if (dept && num && name && reason) {
           courseListHTML += `<li>${dept} ${num} - ${name}: ${reason}</li>`;
         }
       });
   
-      // --- 3. Build Output HTML ---
+      // --- 4. Build Output HTML ---
       // This HTML structure must EXACTLY match your introduction.html
       const generatedHTML = `
         <figure>
-          <img src="${imgUrl}" alt="User's introduction image" class="centered-image"/>
+          <img src="${imageUrl}" alt="User's introduction image" class="centered-image"/>
           <figcaption class="center">${imgCaption}</figcaption>
         </figure>
         <section>
@@ -92,93 +105,75 @@ document.addEventListener('DOMContentLoaded', () => {
         </p>
       `;
   
-      // --- 4. Display Results ---
-      // Hide the form
-      introForm.style.display = 'none';
-      // Add the generated HTML to the results container
-      resultsContainer.innerHTML = generatedHTML;
+      // --- 5. Display Results ---
+      // CHANGED: Hide the form container and show the output container
+      document.getElementById('form-container').style.display = 'none'; 
+      outputContainer.innerHTML = generatedHTML;
+      outputContainer.style.display = 'block'; 
     });
   
     /**
      * "Clear" button functionality
-     * (Implements the "Clear" button instruction)
      */
     clearBtn.addEventListener('click', () => {
       // Find all input and textarea elements *within the form*
       const allInputs = introForm.querySelectorAll('input, textarea');
       allInputs.forEach(input => {
-        // Set their value to an empty string
-        input.value = '';
+        // Clear all fields, including the file input
+        if (input.type === 'file') {
+          input.value = null;
+        } else {
+          input.value = '';
+        }
       });
     });
   
     /**
      * "Add Course" button functionality
-     * (Implements the "add new course text boxes" instruction)
      */
     addCourseBtn.addEventListener('click', () => {
-      // Create a new div to hold the course inputs
       const newCourseEntry = document.createElement('div');
       newCourseEntry.classList.add('course-entry');
       
-      // Set its HTML to the same structure as the others (with empty values)
-      // Note: These new fields are also 'required' to match the validation logic
+      // CHANGED: Updated innerHTML to match your new HTML's 'name' attributes (e.g., 'courseDept')
+      // and button text
       newCourseEntry.innerHTML = `
-        <input type="text" name="course_dept" placeholder="Dept" required>
-        <input type="text" name="course_num" placeholder="Num" required>
-        <input type="text" name="course_name" placeholder="Name" required>
-        <input type="text" name="course_reason" placeholder="Reason" required>
-        <button type="button" class="delete-course">Delete</button>
+        <input type="text" name="courseDept" placeholder="Dept" required>
+        <input type="text" name="courseNum" placeholder="Num" required>
+        <input type="text" name="courseName" placeholder="Name" required>
+        <input type="text" name="courseReason" placeholder="Reason" required>
+        <button type="button" class="delete-course">Remove</button>
       `;
       
-      // Add the new set of inputs to the container
       coursesContainer.appendChild(newCourseEntry);
     });
   
     /**
      * "Delete Course" functionality (using Event Delegation)
-     * (Implements the "add a delete button" instruction)
-     * We listen for clicks on the *container*, then check if the click was on a 'delete-course' button.
      */
     coursesContainer.addEventListener('click', (e) => {
       if (e.target.classList.contains('delete-course')) {
-        // If 'Delete' was clicked, remove its parent element (the 'course-entry' div)
         e.target.parentElement.remove();
       }
     });
     
     /**
      * "Reset Page" link functionality (using Event Delegation)
-     * (Implements the "reset link at the bottom" instruction)
      */
-    resultsContainer.addEventListener('click', (e) => {
+    outputContainer.addEventListener('click', (e) => {
       if (e.target.id === 'reset-page') {
         e.preventDefault(); // Stop the link from trying to navigate
         
-        // Clear the results
-        resultsContainer.innerHTML = '';
+        // Clear the results and hide the container
+        outputContainer.innerHTML = '';
+        outputContainer.style.display = 'none';
         
         // Show the form again
-        introForm.style.display = 'block';
+        document.getElementById('form-container').style.display = 'block';
         
         // Reset the form to its *original pre-filled values*
-        // This is the default behavior of <button type="reset">,
-        // so we trigger the form's built-in reset() method.
         introForm.reset();
       }
     });
-  
-    /**
-     * "Reset" button functionality
-     * (Implements the "reset the progress of the form" instruction)
-     * The <button type="reset"> in HTML handles this automatically by
-     * reverting fields to their default 'value' attribute.
-     * If you wanted to add *extra* logic on reset, you would listen for it:
-     *
-     * introForm.addEventListener('reset', () => {
-     * console.log("Form has been reset to default values!");
-     * });
-     * * But for this assignment, no extra JS is needed for the reset button itself.
-     */
   
   });

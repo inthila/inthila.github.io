@@ -3,31 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inthila Chanthirat's Interesting Capybara | ITIS3135 | Introduction Form</title>
+  <title>Inthila Chanthirat's Interesting Capybara | ITIS3135 | Introduction</title>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/default.css" />
-  <script src="scripts/introduction.js" defer></script>
 </head>
 <body>
   <header>
     <div data-include="components/header.html"></div>
   </header>
-  
   <main>
-    <h2>Introduction Form</h2>
-    <h3>Please submit the form below.</h3>
+    <h2>Introduction</h2>
+    <figure>
+      <img src="images/inthilainlaos.jpeg" alt="Professional headshot of Inthila Chanthirat" class="centered-image"/>
+      <figcaption class="center">Photo taken in Vientiane, Laos</figcaption>
+    </figure>
+    <section>
+      <h3>About Me</h3>
+      <p>I am a cybersecurity student and I work at a food hall in my hometown. I’m from the Charlotte area. I love playing games like Truck Simulator and my goal in life is to become forklift certified.</p>
+    </section>
 
-    <form id="intro-form">
-        </form>
+    <section>
+      <h3>Personal Background</h3>
+      <p>I am currently working towards my bachelors and I have a deep love for learning and helping others. My heritage is Laos and I grew up in the Charlotte area my whole life.</p>
+    </section>
     
-    <div id="results-container"></div>
+    <section>
+      <h3>Professional Background</h3>
+      <p>I was an associate at Denso manufacturing for a couple of months before I went back to food service. I currently run the food stall me and my friends helped to launch in 2024.</p>
+    </section>
     
+    <section>
+      <h3>Academic Background</h3>
+      <p>I went to high school at the Early College in Concord, NC. I am now a cybersecurity major in my second year at UNCC. </p>
+    </section>
+    
+    <section>
+      <h3>Courses I’m Taking, & Why</h3>
+      <ul>
+        <li>ITSC 3146 - Operating Systems & Networking: Required for my major and necessary for learning cybersecurity.</li>
+        <li>ITIS 3135 - Front-End Web App Development: Required. I am excited for this class.</li>
+        <li>MATH 1242 - Calculus II: Required and I am concerned about taking this class.</li>
+        <li>ITIS 3200 - Intro to Info Security & Privacy: Required for learning cybersecurity.</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h3>Primary Computer</h3>
+      <p>I use my Windows PC at home and Macbook Pro when traveling.</p>
+    </section>
   </main>
-
   <footer>
     <div data-include="components/footer.html"></div>
   </footer>
-  
   <script>
     document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + window.location.href);
     document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + window.location.href);
