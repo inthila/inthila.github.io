@@ -1,0 +1,33 @@
+[
+    {
+      "category": "Custom Cakes",
+      "description": "Perfect for birthdays and special events. Choose your flavor, filling, and frosting!",
+      "items": [
+        {
+          "name": "Classic Vanilla",
+          "details": "Moist vanilla cake with vanilla whip frosting and assorted fruit.",
+          "note": "Starting at $45"
+        },
+        {
+            "name": "Chocolate Indulgence",
+            "details": "Rich chocolate cake with chocolate whip frosting and assorted fruit.",
+            "note": "Starting at $45"
+        },
+        {
+          "name": "Pandan Delight",
+          "details": "Fragrant pandan cake with vanilla whip frosting and assorted fruit.",
+          "note": "Starting at $50"
+        },
+        {
+          "name": "Coconut Vanilla",
+          "details": "Rich coconut cake with vanilla whip, toasted coconut flakes and assorted fruit.",
+          "note": "Starting at $50"
+        },
+        {
+            "name": "Ube Cake",
+            "details": "Moist ube cake with ube-flavored whip frosting and assorted fruit.",
+            "note": "Starting at $50"
+        }
+      ]
+    }
+]

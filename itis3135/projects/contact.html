@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Order | Sophie's Cakeshop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+
+    <header>
+        <div id="logo"><h1>Sophie's Cakeshop</h1></div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="page-title">Custom Order Inquiry</h2>
+        
+        <section id="contact-info" style="text-align: center; margin-bottom: 2em;">
+            <p>Please fill out the form below to request a custom order quote or ask a general question. We will do our best to respond within 48 hours.</p>
+        </section>
+
+        <section id="order-form-container">
+            <form id="order-inquiry-form" action="mailto:sophie@example.com" method="post" enctype="text/plain">
+                
+                <div class="form-group">
+                    <label for="full-name">Your Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="Full Name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="Email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-needed">Date Needed <span class="required">*</span></label>
+                    <input type="text" id="date-needed" name="Date Needed" required readonly>
+                    <span class="error-message" id="date-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="order-type">Type of Order</label>
+                    <select id="order-type" name="Order Type">
+                        <option value="cake">Classic Vanilla</option>
+                        <option value="cake">Chocolate Indulgence</option>
+                        <option value="cake">Pandan Delight</option>
+                        <option value="cake">Coconut Vanilla</option>
+                        <option value="cake">Ube Cake</option>
+                        <option value="other">Other/General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Order Details / Message <span class="required">*</span></label>
+                    <textarea id="message" name="Details / Message" rows="6" required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                
+                <div class="form-group submit-group">
+                    <button type="submit" class="button primary">Submit Inquiry</button>
+                    <div id="general-error" class="error-message"></div>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Sophie's Cakeshop. All rights reserved.</p>
+        <p><a href="#">[HTML Validation Link]</a> | <a href="#">[CSS Validation Link]</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
