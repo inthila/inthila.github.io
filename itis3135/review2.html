@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inthila Chanthirat's Interesting Capybara | ITIS3135 | Peer Review 2</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/default.css" />
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  
+  <main>
+    <h2>Peer Review 2</h2>
+    
+    <h3>Review Target: Leventhal, Griffin</h3>
+
+    <figure>
+        <img src="images/peer2_screenshot.png" alt="Screenshot of Peer's Website" style="max-width: 100%; height: auto;">
+        <figcaption>
+            Site URL: <a href="https://webpages.charlotte.edu/gleventh/client-website/index.html" target="_blank">https://webpages.charlotte.edu/gleventh/client-website/index.html</a>
+        </figcaption>
+    </figure>
+
+    <h4>Evaluation Summary and Recommendations</h4>
+    
+    <p><strong>A. Review based on Standard Website Checklist:</strong></p>
+    <ul>
+        <li>Design/Contrast (3a): This is the most significant issue. The white text for the name ("ALISHA ZHAO") is placed over a very light, low-contrast background image, making it difficult to read. The placeholder text for the "About Me" section (black text on a mid-tone brown background) also suffers from low contrast. This needs correction to meet basic accessibility standards.</li>
+        <li>CRAP - Contrast & Proximity (3c): The main navigation links use good contrast against the dark brown header bar. The name/tagline elements are well-grouped (Proximity). The lack of overall visual contrast for the headline text is the primary design failure point.</li>
+        <li>Page Structure/Branding (4, 5, 7): The page uses a clear header, main content area, and footer (visible with "Copyright 2025"). The main heading, "ALISHA ZHAO," effectively serves as the site's brand. The site is clearly using a unique CSS for a standalone project (portfolio), which meets Item 3b.</li>
+        <li>Navigation: The primary navigation links are excellent for a professional portfolio: Home, Animation Portfolio, Artwork Portfolio, Resume, Contact.</li>
+        </ul>
+    
+    <p><strong>B. Review based on Client Project Pt. 2 Requirements:</strong></p>
+    <ul>
+        <li>Content & Branding: The use of abstract, artistic imagery is highly relevant for an artist's portfolio, setting a strong visual tone. The content is focused on the individual/artist, which is appropriate for a client project with a personal brand goal.</li>
+        <li>Clear Purpose: The navigation immediately establishes the purpose: displaying different types of work and providing a contact point. The "About Me" section clearly serves as the introductory content.</li>
+        <li>"About Me" Section: While the use of filler text ("Lorem ipsum...") is noted, ensure the final content is professional, well-written, and clearly articulates Alisha's skills and goals as an artist.</li> <li>HTML/CSS Validation (Checklist Item 8b, 8c): Since the validation links are not visible, include a general note. Recommendation: Ensure both valid HTML and CSS links/buttons are prominently displayed, especially in the footer, and report zero errors/warnings.</li>
+        </ul>
+    
+    <p><strong>C. Additional Suggestions (Stop, Start, Continue):</strong></p>
+    <ul>
+        <li>Stop: Stop relying on a low-opacity background image for the main text. The current approach makes the brand name unreadable. Either darken the background image significantly, or place a semi-transparent, solid color overlay behind the white text to ensure high contrast.</li>
+        <li>Start: Start prioritizing the image links/previews for the two portfolio sections. On the homepage, maybe include a quick grid of 3-4 featured thumbnails to visually lead the user to the Animation Portfolio and Artwork Portfolio pages.</li>
+        <li>Continue: Continue with the minimalist, high-impact design. The font choice and overall color palette (dark brown, tan, gold) are sophisticated. The footer credit ("Designed by Griffin Leventhal") is a professional touch that should be maintained.</li>
+    </ul>
+
+  </main>
+  
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + window.location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + window.location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
